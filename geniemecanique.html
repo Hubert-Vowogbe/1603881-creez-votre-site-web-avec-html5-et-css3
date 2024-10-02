@@ -1,0 +1,356 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    
+    <!--====== Title ======-->
+    <title>Ressources universitaires</title>
+    <!--====== pour décrire le site pour aider dans le moteur de recheche ======-->
+    <meta name="description" content="Ressources Étudiants offre des cours en génie civil, maths, info, physique, avec soutien à domicile/ligne, formations logiciels et webinaires">
+    <!--====== sert à configurer la mise en page d'un site web pour qu' elle s'adapte correctement aux différents types d'appareils ======-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+        
+        
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+        
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+        
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="assets/css/default.css">
+    
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+</head>
+
+<body>
+    
+    <!--====== PRELOADER PART START ======-->
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== HEADER PART START ======-->
+ 
+    <section class="header_area">
+        <div class="header_navbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="assets/images/logo.png" alt="Logo">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul id="nav" class="navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="index.html">Acceuil</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="servicesauxetudiants.html">Services aux Étudiants</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="coursdesoutien.html">Cours de Soutien</a>
+                                    </li>
+    
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="formation.html">Formation en ligne</a>
+                                    </li>
+                                    
+                                    
+                                </ul>
+                            </div> <!-- navbar collapse -->
+                        </nav> <!-- navbar -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header navbar -->
+
+        <div id="Home" class="header_slider">
+            <div class="single_slider bg_cover d-flex align-items-center" style="background-image: url(assets/images/slider-1.jpg)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10">
+                            <div class="slider_content">
+                                <h2 class="slider_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Ressources universitaires</h2>
+                                <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">"L'éducation est le socle sur lequel chaque étudiant bâtit son avenir, et je suis là pour les aider à poser des fondations solides."— Hubert K.V.</p> 
+                            </div> <!-- slider content -->
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- single slider -->
+        </div> <!-- header slider -->
+    </section>
+
+    <!--====== HEADER PART ENDS ======-->
+    
+    <!--====== ADD DOCUMENT    Les documents seront ajoutés au fur et à mesure ======-->
+    <section id="documents" class="documents_area pt-80 pb-130">
+        <div class="container">
+            <h3 class="title">Télécharger des Documents PDF- Mathématiques</h3>
+            <div class="row" id="document-list">
+                <!-- PDF links will be injected here by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Array contenant les documents et leurs liens
+        const documents = [  
+            // Cours de 
+            { title: "Le béton précontraint 1", link: "assets/pdf/le_beton_precontraint.pdf" },
+           
+
+            // Ajouter plus de documents ici
+        ];
+    
+        const documentList = document.getElementById('document-list');
+    
+        documents.forEach(doc => {
+            const docElement = document.createElement('div');
+            docElement.classList.add('col-lg-4', 'col-sm-6', 'document-item');
+            
+            // Crée un lien pour ouvrir le document PDF dans un nouvel onglet
+            docElement.innerHTML = `
+                <a href="${doc.link}" class="btn btn-primary" target="_blank">
+                    ${doc.title}
+                </a>
+            `;
+            documentList.appendChild(docElement);
+        });
+    </script>
+    
+    <!--====== ENDS DOCUMENTS ======-->
+
+    <!--====== ABOUT PART START ======-->
+
+    <section id="about" class="about_area pt-80 pb-130">
+        <div class="about_bg d-none d-lg-block">
+            <div class="about_bg_image bg_cover" style="background-image: url(assets/images/about_bg.jpg)"></div>
+        </div> <!-- about bg -->
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about_image mt-50 wow fadeInRightBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <img src="assets/images/about_image.jpg" alt="About">
+                    </div> <!-- about image -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="about_content mt-50 wow fadeInLeftBig" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <h3 class="sub_title"><span>+10</span> Ans d'experiences</h3>
+                        <h4 class="main_title">Avec une équipe dynamique, nous facilitons la compréhension des cours pédagogiques et mettons à votre disposition les ressources nécessaires pour l'assimilation des concepts. Nous transformons vos stages en occasions d'apprentissage, de perfectionnement et d'insertion professionnelle. </h4>
+                        
+                        <a href="https://www.linkedin.com/in/helpstage-universit%C3%A9/" class="main-btn" target="_blank">Lire plus</a>
+                    </div> <!-- about content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== ABOUT PART ENDS ======-->
+    
+    <!--====== SERVICES PART START ======-->
+
+    <section id="services" class="services_area pt-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section_title">
+                        <h4 class="title">Nos Domaines d'Expertise</h4>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div class="services_icon">
+                            <i class="lni lni-compass"></i>
+                        </div>
+                        <div class="services_content">
+                            <h4 class="title">Mathématiques</h4>
+                            <p>La filière de mathématiques à l'université couvre l'analyse, l'algèbre, la géométrie et les statistiques, formant des experts pour la recherche, l'enseignement et divers secteurs industriels.</p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="services_icon">
+                            <i class="lni lni-apartment"></i>
+                        </div>
+                        <div class="services_content">
+                            <h4 class="title">Informatique</h4>
+                            <p>La filière informatique à l'université forme des professionnels en programmation, systèmes, réseaux, et intelligence artificielle. Les étudiants acquièrent des compétences en développement logiciel, gestion de données et sécurité informatique.</p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                        <div class="services_icon">
+                            <i class="lni lni-construction"></i>
+                        </div>
+                        <div class="services_content">
+                            <h4 class="title">Génie Mécanique</h4>
+                            <p>Le génie mécanique se concentre sur la conception et l'analyse de systèmes mécaniques, incluant machines, véhicules et technologies, pour améliorer l'efficacité.</p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div class="services_icon">
+                            <i class="lni lni-ruler-pencil"></i>
+                        </div>
+                        <div class="services_content">
+                            <h4 class="title">Physique</h4>
+                            <p>La filière de physique universitaire explore les lois fondamentales de l'univers, de la mécanique quantique à la relativité, formant des experts pour la recherche et l'ingénierie.</p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+                        <div class="services_icon">
+                            <i class="lni lni-brush-alt"></i>
+                        </div>
+                        <div class="services_content">
+                            <h4 class="title">Génie Civil</h4>
+                            <p>Le génie civil est une discipline qui conçoit, construit et maintient les infrastructures essentielles : routes, bâtiments, ponts et réseaux.</p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single_services mt-50 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                        <div class="services_icon">
+                            <i class="lni lni-bolt"></i>
+                        </div>
+                        <div class="services_content">
+                            <h4 class="title">Génie Electrique</h4>
+                            <p>Le génie électrique concerne la conception et l'application de systèmes électriques et électroniques, incluant l'énergie, les télécommunications, l'automatisation et les réseaux, pour soutenir l'innovation technologique moderne.</p>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== SERVICES PART ENDS ======-->
+    
+    
+    <!--====== COUNTER PART START ======-->
+
+    <section id="counter" class="counter_area bg_cover pt-120 pb-130" style="background-image: url(assets/images/counter.jpg)">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section_title section_title_2 text-center pb-25">
+                        <h4 class="title">Nos Réalisations<br> en Chiffres</h4>
+                    </div> <!-- section title -->
+                </div> 
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-3 col-sm-3 col-6">
+                    <div class="single_counter text-center mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                        <div class="counter_icon">
+                            <i class="lni lni-happy"></i>
+                        </div>
+                        <div class="counter_content">
+                            <span>+500</span>
+                            <p>Des clients satisfaits</p>
+                        </div>
+                    </div> <!-- single counter -->
+                </div>
+                <div class="col-lg-3 col-sm-3 col-6">
+                    <div class="single_counter text-center mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.4s">
+                        <div class="counter_icon">
+                            <i class="lni lni-checkmark-circle"></i>
+                        </div>
+                        <div class="counter_content">
+                            <span>+100</span>
+                            <p>Projets réalisés</p>
+                        </div>
+                    </div> <!-- single counter -->
+                </div>
+                <div class="col-lg-3 col-sm-3 col-6">
+                    <div class="single_counter text-center mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.6s">
+                        <div class="counter_icon">
+                            <i class="lni lni-users"></i>
+                        </div>
+                        <div class="counter_content">
+                            <span>10</span>
+                            <p>MEMBRES DE L'ÉQUIPE</p>
+                        </div>
+                    </div> <!-- single counter -->
+                </div>
+                
+                <div class="col-lg-3 col-sm-3 col-6">
+                    <div class="single_counter text-center mt-30 wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.8s">
+                        <div class="counter_icon">
+                            <i class="lni lni-cup"></i>
+                        </div>
+                        <div class="counter_content">
+                            <span>+100</span>
+                            <p>Projets réussis</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <!--====== COUNTER PART ENDS ======-->
+
+
+    <!--====== Jquery js ======-->
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    
+    <!--====== Bootstrap js ======-->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    
+    <!--====== Scrolling Nav js ======-->
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/scrolling-nav.js"></script>
+    
+    <!--====== WOW js ======-->
+    <script src="assets/js/wow.min.js"></script>
+
+
+    
+    <!--====== Main js ======-->
+    <script src="assets/js/main.js"></script>
+    
+</body>
+
+</html>
